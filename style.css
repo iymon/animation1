@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: consolas;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #00051ed4;
+}
+
+.container {
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    top: 49%;
+    left: 16%;
+    margin: -150px 0 0 -150px;
+}
+
+.square {
+    height: 94%;
+    width: 94%;
+    background: #1818ff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  
+    margin: -47% 0 0 -47%;
+}
+
+.black {
+    background: #fff;
+    animation: rotate 10s infinite linear;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+
+
+
+.wavy {
+    position: relative;
+
+}
+
+.wavy span {
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    font-size: 2em;
+    text-transform: uppercase;
+    animation: animate 1s ease-in-out infinite;
+    animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0px);
+    }
+
+    20% {
+        transform: translateY(-20px);
+    }
+
+    40%,
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
+
+.box1{
+    position: relative;
+    top: -207px;
+    left: 289px;
+
+    margin-top: 400px;
+    margin-left: 200px;
+}
+
+
+.box2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+    transform-origin: bottom left;
+    transform: rotate(-90deg);
+}
+
+.btn .frame{
+    visibility: hidden;
+
+}
+
+
+.frame:hover{
+    border-radius: 50px;
+    box-shadow: 0px 0px 20px 1px #fff;
+}
+.btn-img:hover{
+    animation-direction:alternate;
+    animation-fill-mode:inherit ;
+    animation: plus 0.5s ease 0.3s 1;    
+    transition-delay: 1s;
+    transform: rotate(45deg);
+    border-radius: 50px;
+    box-shadow: 0px 0px 20px 1px #fff;
+}
+
+@keyframes plus {
+    form {
+        transform: rotate(0deg) scale(1.2);
+    }
+    to{
+        transform: rotate(405deg) scale(1.2);
+    }
+}
+.box2:hover .frame{
+    visibility:visible ;
+    transition: 0.8s;
+    transition-delay: 1s;
+    animation-duration: 3s;
+    animation:button 0.9s ease-in-out 0.5s 1 alternate inherit;
+    transform: rotate(90deg);
+    border-radius: 50px;
+    box-shadow: 0px 0px 20px 1px #fff;
+}
+.frame{
+    margin: 20px;
+ 
+}
